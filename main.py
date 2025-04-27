@@ -3,6 +3,7 @@ import gym
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 env = gym.make("MountainCar-v0", render_mode="human")
 # env.reset()
 
