@@ -1,8 +1,10 @@
-from mpl_toolkits.mplot3d import axes3d
-import matplotlib.pyplot as plt
-from matplotlib import style
-import numpy as np
 import os
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+from matplotlib import style
+from mpl_toolkits.mplot3d import axes3d
 
 style.use('ggplot')
 
@@ -41,15 +43,6 @@ for i in range(0, 2000, 1):
         os.makedirs(output_directory)
     plt.savefig(f"qtable_charts/{i}.png")
     plt.clf()
-
-
-
-
-
-
-
-import cv2
-import os
 
 
 def make_video():
