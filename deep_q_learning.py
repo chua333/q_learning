@@ -1,18 +1,19 @@
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, Activation, Flatten
-from tensorflow.keras.callbacks import TensorBoard
-from tensorflow.keras.optimizers import Adam
-import keras.backend as backend
-from collections import deque
+import os
+import cv2
+import time
+import random
 import numpy as np
 import tensorflow as tf
-from tqdm import tqdm
-from PIL import Image
 
-import cv2
-import os
-import random
-import time
+from PIL import Image
+from tqdm import tqdm
+from collections import deque
+import keras.backend as backend
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.callbacks import TensorBoard
+from tensorflow.keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, Activation, Flatten
+
 
 DISCOUNT = 0.99
 REPLAY_MEMORY_SIZE = 50_000  # How many last steps to keep for model training
@@ -189,8 +190,8 @@ np.random.seed(1)
 tf.random.set_seed(1)
 
 # Memory fraction, used mostly when trai8ning multiple agents
-#gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=MEMORY_FRACTION)
-#backend.set_session(tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)))
+# gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=MEMORY_FRACTION)
+# backend.set_session(tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)))
 
 # Create models folder
 if not os.path.isdir('models'):
