@@ -1,11 +1,12 @@
-import pickle
-import time
 import cv2
+import time
+import pickle
 
 import numpy as np
 from PIL import Image
 from matplotlib import style
 import matplotlib.pyplot as plt
+
 
 style.use('ggplot')
 
